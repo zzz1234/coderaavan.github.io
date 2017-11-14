@@ -60,58 +60,31 @@
 						We are going to explain how Theory of Computations is applicable in Network Security. Particularly use of Definite Finite Automata in making Network Attacks like DOS.
 					</p>
 				</section>
-
+				<section>
+					<h3>Why there is a need of network security?</h3>
+					<p style="font-size:30px">Any computer connected to a computing network is potentially vulnerable to an attack.
+						An "Attack" is the exploitation of a flaw in a computing system (operating system, software program or user system) for purposes that are not known by the system operator and that are generally harmful.
+						Attacks are always taking place on the internet, at a rate of several attacks per minute on each connected machine. These attacks are mostly launched automatically from infected machines (by viruses, Trojan horses, worms, etc.) without their owner's knowledge. In rarer cases, they are launched by computer hackers.
+					</p>
+				</section>
+				<section>
 				<section>
 					<h2>Introduction</h2>
 					<p>
 						What is DOS Attack?
 					</p>
 				</section>
-
 				<section>
-					<section>
-						<h3>So how many types of DOS attacks are there?</h3>
-						<p>A lot. So let's see few of them:</p>
-					</section>
-					<section>
-						<h3>IP Spoofing</h3>
-						<p style="font-size:30px">
-								IP Spoofing is a technique used to gain unauthorized access to machines, whereby an attacker illicitly impersonate another machine by manipulating IP packets.
-								IP Spoofing involves modifying the packet header with a forged (spoofed) source IP address, a checksum, and the order value. Internet is a packet switched network, which causes the packets leaving one machine may be arriving at the destination machine in different order.
-								The receiving machine resembles the message based on the order value embedded in the IP header. IP spoofing involves solving the algorithm that is used to select the order sent values, and to modify them correctly.
-						</p>
-					</section>
-					<section>
-						<h3>UDP Flooding</h3>
-						<p>
-								A UDP flood, by definition, is any DDoS attack that floods a target with User Datagram Protocol (UDP) packets.
-								The goal of the attack is to flood random ports on a remote host. This causes the host to repeatedly check for the application listening at that port, and (when no application is found) reply with an ICMP ‘Destination Unreachable’ packet. 
-								This process saps host resources, which can ultimately lead to inaccessibility.
-						</p>
-					</section>
-					<section>
-						<h3>SYN Flooding- Our area of work</h3>
-						<p style="font-size:30px">
-								A SYN flood DDoS attack exploits a known weakness in the TCP connection sequence (the “three-way handshake”), wherein a SYN request to initiate a TCP connection with a host must be answered by a SYN-ACK response from that host, and then confirmed by an ACK response from the requester. 
-								In a SYN flood scenario, the requester sends multiple SYN requests, but either does not respond to the host’s SYN-ACK response, or sends the SYN requests from a spoofed IP address. 
-								Either way, the host system continues to wait for acknowledgement for each of the requests, binding resources until no new connections can be made, and ultimately resulting in denial of service.
-						</p>
-					</section>
+					<p>
+						A denial-of-service attack is a security event that occurs when an attacker takes action that prevents legitimate users from accessing targeted computer systems, devices or other network resources.
+						Denial-of-service (DoS) attacks typically flood servers, systems or networks with traffic in order to overwhelm the victim resources and make it difficult or impossible for legitimate users to use them.
+					</p>
+				</section>
 				</section>
 
 				<section>
 						<section>
 								<h3>Prerequisites to Know first</h3>
-							</section>
-							<section>
-								<h3>How TCP/IP works?</h3>
-								<ul style="font-size:30px">
-										<li>Three Way Handshake</li>
-										<li>A client node sends a SYN data packet over an IP network to a server on the same or an external network. The objective of this packet is to ask/infer if the server is open for new connections.</li>
-										<li>The target server must have open ports that can accept and initiate new connections. When the server receives the SYN packet from the client node, it responds and returns a confirmation receipt – the ACK packet or SYN/ACK packet.</li>
-										<li>The client node receives the SYN/ACK from the server and responds with an ACK packet.</li>
-										<li>But what if client node doesn't respond?</li>
-								</ul>
 							</section>
 							<section>
 								<h3>Finite Automata/Finite State Machine</h3>
@@ -150,6 +123,63 @@
 								<h3>Graphical Representation</h3>
 								<img src="https://www.tutorialspoint.com/automata_theory/images/dfa_graphical_representation.jpg">
 							</section>
+							<section>
+								<h3>How TCP/IP works?</h3>
+								<ul style="font-size:30px">
+										<li>Three Way Handshake</li>
+										<li>A client node sends a SYN data packet over an IP network to a server on the same or an external network. The objective of this packet is to ask/infer if the server is open for new connections.</li>
+										<li>The target server must have open ports that can accept and initiate new connections. When the server receives the SYN packet from the client node, it responds and returns a confirmation receipt – the ACK packet or SYN/ACK packet.</li>
+										<li>The client node receives the SYN/ACK from the server and responds with an ACK packet.</li>
+										<li>But what if client node doesn't respond?</li>
+								</ul>
+							</section>
+							<section>
+								<h3>Three Way Handshake-DFA</h3>
+								<center><div style="height:600px;width:600px"><img src="staticFiles/img/1.jpg"></div></center>
+							</section>
+				</section>
+				<section>
+					<section>
+						<h3>So how many types of DOS attacks are there?</h3>
+						<p>A lot. So let's see few of them:</p>
+					</section>
+					<section>
+						<h3>IP Spoofing</h3>
+						<p style="font-size:30px">
+								IP Spoofing is a technique used to gain unauthorized access to machines, whereby an attacker illicitly impersonate another machine by manipulating IP packets.
+								IP Spoofing involves modifying the packet header with a forged (spoofed) source IP address, a checksum, and the order value. Internet is a packet switched network, which causes the packets leaving one machine may be arriving at the destination machine in different order.
+								The receiving machine resembles the message based on the order value embedded in the IP header. IP spoofing involves solving the algorithm that is used to select the order sent values, and to modify them correctly.
+						</p>
+					</section>
+					<section>
+						<h3>IP Spoofing-DFA</h3>
+						<img src="staticFiles/img/ipspoof.png">
+					</section>
+					<section>
+						<h3>UDP Flooding</h3>
+						<p>
+								A UDP flood, by definition, is any DDoS attack that floods a target with User Datagram Protocol (UDP) packets.
+								The goal of the attack is to flood random ports on a remote host. This causes the host to repeatedly check for the application listening at that port, and (when no application is found) reply with an ICMP ‘Destination Unreachable’ packet. 
+								This process saps host resources, which can ultimately lead to inaccessibility.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>SYN Flooding- Our area of work</h3>
+						<p style="font-size:30px">
+								A SYN flood DDoS attack exploits a known weakness in the TCP connection sequence (the “three-way handshake”), wherein a SYN request to initiate a TCP connection with a host must be answered by a SYN-ACK response from that host, and then confirmed by an ACK response from the requester. 
+								In a SYN flood scenario, the requester sends multiple SYN requests, but either does not respond to the host’s SYN-ACK response, or sends the SYN requests from a spoofed IP address. 
+								Either way, the host system continues to wait for acknowledgement for each of the requests, binding resources until no new connections can be made, and ultimately resulting in denial of service.
+						</p>
+					</section>
+					<section>
+						<h3>SYN Flooding-DFA</h3>
+						<img src="staticFiles/img/synflood.png">
+					</section>
+					<section>
+						<strong><p>So this is how we can implement TOC in understanding various Network Attacks.</p></strong>
+					</section>
 				</section>
 				<section>
 					<h1>Thank You!</h1>
